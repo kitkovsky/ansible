@@ -1,0 +1,14 @@
+- name: setup lazygit
+  ansible.builtin.git:
+    repo: "git@github.com:jesseduffield/lazygit.git"
+    recursive: yes
+    dest: "{{ personal }}/lazygit"
+  tags:
+    - install
+
+- name: build lazygit
+  ansible.builtin.shell:
+    cmd: go install
+    chdir: "{{ personal }}/lazygit"
+  tags:
+    - install

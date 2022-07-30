@@ -1,0 +1,34 @@
+- name: install system packages 1 (build-essential, cmake, pkg-config, autoconf, g++, doxygen)
+  become: true
+  apt:
+    name: ["build-essential", "cmake", "pkg-config", "autoconf", "g++", "doxygen"]
+  tags:
+    - install
+    - neovim
+    - core
+
+- name: install system packages 2 (lua, golang, unzip, libtool, libtool-bin, gettext)
+  become: true
+  apt:
+    name: ["lua5.4", "golang", "unzip", "libtool", "libtool-bin", "gettext"]
+  tags:
+    - install
+    - neovim
+    - core
+
+- name: install system packages 3 (the rest)
+  become: true
+  apt:
+    name:
+      [
+        "picom",
+        "curl",
+        "btop",
+        "i3-gaps",
+        "ninja-build",
+        "python3-pip",
+        "moreutils",
+      ]
+  tags:
+    - install
+    - core

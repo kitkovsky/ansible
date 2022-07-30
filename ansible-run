@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+## install ansible
+sudo apt update -y
+sudo apt install -y curl git software-properties-common ansible
+
+## pull ansible
+sudo ansible-pull -U https://github.com/kitkovsky/ansible.git

@@ -1,0 +1,15 @@
+- name: install other stuff
+  become: true
+  apt:
+    name:
+      [
+        "neofetch",
+        "polybar",
+        "tmux",
+        "fzf",
+        "ripgrep",
+        "xclip",
+      ]
+  tags:
+    - install
+    - other-stuff
