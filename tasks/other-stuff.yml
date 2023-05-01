@@ -2,14 +2,7 @@
   become: true
   apt:
     name:
-      [
-        "neofetch",
-        "polybar",
-        "tmux",
-        "fzf",
-        "ripgrep",
-        "xclip",
-      ]
+      ["neofetch", "polybar", "tmux", "fzf", "ripgrep", "xclip", "lm-sensors"]
   tags:
     - install
     - other-stuff
